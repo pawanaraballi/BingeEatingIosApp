@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B0A67CF38779A67DF60BE2FA47A28BB591A847BA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807,
+    "6780DC99A6A04A79936E449885C870311076070A" : 9223372036854775807,
+    "AAB75E8C3BB3D27CB6BAA34060B1D74CE0885C17" : 9223372036854775807,
+    "B0A67CF38779A67DF60BE2FA47A28BB591A847BA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F8064737-E4E9-4AA1-B8F8-A91C29C8E5CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "iOS-Apps\/FinalProject\/Alamofire\/",
+    "6780DC99A6A04A79936E449885C870311076070A" : "iOS-Apps\/FinalProject\/SDCAlertView\/",
+    "AAB75E8C3BB3D27CB6BAA34060B1D74CE0885C17" : "iOS-Apps\/FinalProject\/Then\/",
+    "B0A67CF38779A67DF60BE2FA47A28BB591A847BA" : "iOS-Apps\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FinalProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FinalProject\/FinalProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sberrevoets\/SDCAlertView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6780DC99A6A04A79936E449885C870311076070A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/devxoul\/Then.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AAB75E8C3BB3D27CB6BAA34060B1D74CE0885C17"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KranthiChinnakotla\/iOS-Apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B0A67CF38779A67DF60BE2FA47A28BB591A847BA"
+    }
+  ]
+}
