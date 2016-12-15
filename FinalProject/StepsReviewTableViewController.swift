@@ -56,13 +56,24 @@ class StepsReviewTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepsCellIdentifier", for: indexPath) as! StepsTableViewCell
             
             cell.question.text = reviewQuestions[indexPath.row].question
-            if reviewQuestions[indexPath.row].step == "YES"{
+            cell.switch.addTarget(self, action: #selector(nextStep), for: .touchUpInside)
+            cell.switch.tag = indexPath.row
+            if reviewQuestions[indexPath.row].answer == "YES"{
                 cell.switch.isOn = true
             }else{
                 cell.switch.isOn = false
             }
             return cell
         }
+    }
+    
+    func nextStep(sender: UISwitch){
+        if reviewQuestions[sender.tag].answer == "YES"{
+            reviewQuestions[sender.tag].answer = "NO"
+        }else{
+            reviewQuestions[sender.tag].answer = "YES"
+        }
+        print(reviewQuestions[sender.tag].answer)
     }
     
 

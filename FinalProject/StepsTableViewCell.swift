@@ -14,7 +14,8 @@ class StepsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    @IBOutlet weak var question: UILabel!
+    
+    @IBOutlet weak var question: UITextView!
     @IBOutlet weak var `switch`: UISwitch!
 
     override func setSelected(_ selected: Bool, animated: Bool) {

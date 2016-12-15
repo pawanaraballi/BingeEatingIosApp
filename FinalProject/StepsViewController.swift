@@ -9,7 +9,8 @@
 import UIKit
 import Alamofire
 var reviewQuestions = [StepsQuestions]()
-var currentstep = 1
+var currentstep: Int = 1
+var userStep: Int = 1
 
 class StepsViewController: UIViewController {
     
@@ -34,10 +35,14 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var nButton: DesignableButtonClass!
     @IBOutlet weak var gReviewButton: DesignableButtonClass!
     @IBAction func yesButton(_ sender: UIButton) {
+        StepsQuestion[index].answer = "YES"
+        reviewQuestions[index].answer = "YES"
         index += 1
         displayQuestion()
     }
     @IBAction func noButton(_ sender: UIButton) {
+        StepsQuestion[index].answer = "NO"
+        reviewQuestions[index].answer = "NO"
         index += 1
         displayQuestion()
     }
@@ -51,6 +56,24 @@ class StepsViewController: UIViewController {
     
         
     func loadQuestions(){
+        
+        Alamofire.request("http:54.197.12.149/user/currentStep?token=\(token)").responseJSON { (response) in
+            print(response.result.value)
+            let a = response.result.value as? Dictionary<String,AnyObject>
+            let qustns = a?["data"] as? Dictionary<String,AnyObject>
+            if(qustns != nil){
+                userStep = Int(qustns?["step"] as! Int)
+                
+            }else if(qustns == nil){
+                let alertController = UIAlertController(title: "Connection Issue", message: "Check the connection with server", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Connection Issue", style: .default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+            DispatchQueue.main.async{
+                print(userStep)
+            }
+        }
+        if currentstep <= userStep + 1 {
             Alamofire.request("http:54.197.12.149/user/Steps?token=\(token)").responseJSON { (response) in
                 let a = response.result.value as? Dictionary<String,AnyObject>
                 let qustns = a?["data"] as? NSArray
@@ -62,8 +85,8 @@ class StepsViewController: UIViewController {
                         let sstep = step.components(separatedBy: ".")
                         if sstep[0] == "\(currentstep)" {
                             let question = adata?["question"] as! String
-                            self.StepsQuestion.append(StepsQuestions(step:step, question:question))
-                            reviewQuestions.append(StepsQuestions(step:"YES", question:question))
+                            self.StepsQuestion.append(StepsQuestions(step:step, question:question,answer:""))
+                            reviewQuestions.append(StepsQuestions(step:step, question:question,answer:""))
                         }
                     }
                     
@@ -78,8 +101,7 @@ class StepsViewController: UIViewController {
                 self.displayQuestion()
             
         }
-            
-        
+        }
     
     }
     

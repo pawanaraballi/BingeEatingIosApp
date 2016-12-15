@@ -10,9 +10,11 @@ import Foundation
 public class StepsQuestions{
     var step = String()
     var question = String()
+    var answer = String()
     
-    init(step:String, question:String) {
+    init(step:String, question:String, answer:String) {
         self.question = question
         self.step = step
+        self.answer = answer
     }
 }

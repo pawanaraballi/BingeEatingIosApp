@@ -4,19 +4,19 @@ PODS:
   - AWSCore (2.4.5)
   - AWSS3 (2.4.5):
     - AWSCore (= 2.4.5)
-  - KDCircularProgress (1.5.2)
+  - UICircularProgressRing (1.1.5)
 
 DEPENDENCIES:
   - AWSCognito
   - AWSS3
-  - KDCircularProgress
+  - UICircularProgressRing
 
 SPEC CHECKSUMS:
   AWSCognito: 96e1762404831ffb87f67c87a5ee68fde543bb69
   AWSCore: 2f356385bcea9b81ea47f9be0228c71697d9597d
   AWSS3: 8f73b439f12c4aaaea39fbec87f67a1f1e15bd42
-  KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
+  UICircularProgressRing: 6b2005f7c96e3e3bcd9532154945e5f14bab9a5c
 
-PODFILE CHECKSUM: aa4cb1823e0adeeebcc51b8e21fde30de4a87232
+PODFILE CHECKSUM: 397733ff26d6f2e31cd20f5cdcee7688809db1bb
 
 COCOAPODS: 1.1.1

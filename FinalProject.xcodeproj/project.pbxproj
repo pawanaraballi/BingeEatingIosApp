@@ -38,6 +38,11 @@
 		76D4BAD01DD29FAF008FFD03 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D4BACF1DD29FAF008FFD03 /* SWRevealViewController.m */; };
 		76DA8DF71DDDF8E100417FBB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8DF61DDDF8E100417FBB /* UIViewController.swift */; };
 		76FA59061DCB929D00BF1DC8 /* WeeklyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA59051DCB929D00BF1DC8 /* WeeklyReportViewController.swift */; };
+		C12AEAA81E0217ED0085F81D /* StepsReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AEAA71E0217ED0085F81D /* StepsReviewTableViewController.swift */; };
+		C12AEAC21E021DC60085F81D /* StepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AEAC11E021DC60085F81D /* StepsTableViewCell.swift */; };
+		C12AEAD01E022BE70085F81D /* NextStepReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AEACF1E022BE70085F81D /* NextStepReviewTableViewCell.swift */; };
+		C1DC4C401E00ABC20072ACCC /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC4C3F1E00ABC20072ACCC /* StepsViewController.swift */; };
+		C1DC4C421E00B9CC0072ACCC /* StepsQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC4C411E00B9CC0072ACCC /* StepsQuestions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +218,11 @@
 		76DA8DF61DDDF8E100417FBB /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		76FA59051DCB929D00BF1DC8 /* WeeklyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyReportViewController.swift; sourceTree = "<group>"; };
 		86024C1F428ABD0CF3C6160A /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		C12AEAA71E0217ED0085F81D /* StepsReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsReviewTableViewController.swift; sourceTree = "<group>"; };
+		C12AEAC11E021DC60085F81D /* StepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsTableViewCell.swift; sourceTree = "<group>"; };
+		C12AEACF1E022BE70085F81D /* NextStepReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextStepReviewTableViewCell.swift; sourceTree = "<group>"; };
+		C1DC4C3F1E00ABC20072ACCC /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		C1DC4C411E00B9CC0072ACCC /* StepsQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsQuestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +300,11 @@
 				763F62DB1DDE0D7000C70784 /* DesignableButtonClass.swift */,
 				76B378B21DEA8E1700CEAE6D /* AppointmentsClass.swift */,
 				76B378C01DEB769600CEAE6D /* GoalsViewController.swift */,
+				C1DC4C3F1E00ABC20072ACCC /* StepsViewController.swift */,
+				C1DC4C411E00B9CC0072ACCC /* StepsQuestions.swift */,
+				C12AEAA71E0217ED0085F81D /* StepsReviewTableViewController.swift */,
+				C12AEAC11E021DC60085F81D /* StepsTableViewCell.swift */,
+				C12AEACF1E022BE70085F81D /* NextStepReviewTableViewCell.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -571,7 +586,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -581,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12AEAA81E0217ED0085F81D /* StepsReviewTableViewController.swift in Sources */,
 				76DA8DF71DDDF8E100417FBB /* UIViewController.swift in Sources */,
 				76FA59061DCB929D00BF1DC8 /* WeeklyReportViewController.swift in Sources */,
 				76BF2D4B1DD6626B00675F86 /* ContainerViewController+handler.swift in Sources */,
@@ -589,10 +605,12 @@
 				76AFAD431DE1210800399FCC /* ProfileImage+CoreDataProperties.swift in Sources */,
 				76B378C41DEBA0E800CEAE6D /* Goals+CoreDataClass.swift in Sources */,
 				763F62DC1DDE0D7000C70784 /* DesignableButtonClass.swift in Sources */,
+				C1DC4C421E00B9CC0072ACCC /* StepsQuestions.swift in Sources */,
 				76AFAD421DE1210800399FCC /* ProfileImage+CoreDataClass.swift in Sources */,
 				76B2EC6D1DCAB6BE009CCE48 /* DialyViewController.swift in Sources */,
 				76AF8B671DD3E19200A813D8 /* AppointmentsViewController.swift in Sources */,
 				76B378C11DEB769600CEAE6D /* GoalsViewController.swift in Sources */,
+				C1DC4C401E00ABC20072ACCC /* StepsViewController.swift in Sources */,
 				76B378C51DEBA0E800CEAE6D /* Goals+CoreDataProperties.swift in Sources */,
 				76D09EC81DCB9EEB0024B330 /* ProfileViewController.swift in Sources */,
 				76B2EC6F1DCAC123009CCE48 /* Questions.swift in Sources */,
@@ -600,6 +618,8 @@
 				762F4E2E1DD3C8BF007A7E4E /* DialyViewController+handler.swift in Sources */,
 				76B378B31DEA8E1700CEAE6D /* AppointmentsClass.swift in Sources */,
 				76D4BAD01DD29FAF008FFD03 /* SWRevealViewController.m in Sources */,
+				C12AEAD01E022BE70085F81D /* NextStepReviewTableViewCell.swift in Sources */,
+				C12AEAC21E021DC60085F81D /* StepsTableViewCell.swift in Sources */,
 				76D4BAC01DD29C55008FFD03 /* ContainerViewController.swift in Sources */,
 				76D09ED71DCBB9D00024B330 /* ProfileViewController+handler.swift in Sources */,
 			);
